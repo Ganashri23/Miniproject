@@ -16,7 +16,20 @@ int main()
         printf("2.dragon chicken  -Rs 100\n");
         printf("3.paneer tikka  -Rs 200\n");
         printf("enter items:");
-        scanf("%d",&item)
+        scanf("%d",&item);
+        printf("enter quantity:");
+        scanf("%d",&qty);
+
+        switch(item)
+        {
+            case 1:price=150;break;
+            case 2:price=100;break;
+            case 3:price=200;break;
+            default:
+            printf("invalid item");
+            return 0;
+        }
+        break;
        
 
     }
