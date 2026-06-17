@@ -12,22 +12,12 @@ int main()
     {
         case '1':
         printf("you have choosed starter\n");
-        printf("1.chicken 65\n2.dragon chicken\n3.panner\n");
-        break;
-
-        case'2':
-        printf("you have chossed main course\n");
-        printf("1.milk\n2.curd\n3.lemon\n");
-        break;
-
-        case'3':
-        printf("you have chossed desert\n");
-        printf("1.milk\n2.curd\n3.lemon\n");
-        break;
-
-        case '4':
-        printf("thank you")
-
+        printf("1.chicken 65  -Rs 150\n");
+        printf("2.dragon chicken  -Rs 100\n");
+        printf("3.paneer tikka  -Rs 200\n");
+        printf("enter items:");
+        scanf("%d",&item)
+       
 
     }
 }
