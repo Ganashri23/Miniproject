@@ -1,9 +1,6 @@
 #include<stdio.h>
 int main()
 {
-    char op;
-    int item,qty;
-    float price,gst,total,final_bill;
     printf("\n<-------------WELCOME TO MY DHABA------------->\n");
     printf("select what you want->\n");
     printf("1.starter\n2. main course\n3. desert\n4. exit\n");
