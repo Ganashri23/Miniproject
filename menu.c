@@ -1,95 +1,203 @@
 #include<stdio.h>
+
 int main()
 {
-    char op;
-    int item,qty;
-    float price,gst,total,final_bill;
-    printf("\n<-------------WELCOME TO MY DHABA------------->\n");
-    printf("select what you want->\n");
-    printf("1.starter\n2. main course\n3. desert\n4. exit\n");
-    scanf("%c",&op);
+    int category,item,qty;
+    float price=0,total=0,gst,final_bill;
+    char choice;
 
-    switch(op)
+    printf("\n========== WELCOME TO MY DHABA ==========\n");
+
+    do
     {
-        case '1':
-            printf("\nyou have chosen starter\n");
-            printf("1.chicken 65  -Rs 150\n");
-            printf("2.dragon chicken  -Rs 100\n");
-            printf("3.paneer tikka  -Rs 200\n");
-            printf("enter items:");
-            scanf("%d",&item);
-            printf("enter quantity:");
-            scanf("%d",&qty);
+        printf("\nMENU CATEGORIES\n");
+        printf("1. Starters\n");
+        printf("2. Soups\n");
+        printf("3. Main Course\n");
+        printf("4. Breads\n");
+        printf("5. Rice Items\n");
+        printf("6. Desserts\n");
+        printf("7. Cold Drinks\n");
+        printf("8. Exit\n");
 
-            switch(item)
-            {
-                case 1:price=150;break;
-                case 2:price=100;break;
-                case 3:price=200;break;
-                default:
-                printf("invalid item");
-                return 0;
-            }
+        printf("\nEnter Category : ");
+        scanf("%d",&category);
+
+        switch(category)
+        {
+            case 1:
+                printf("\n------ STARTERS ------\n");
+                printf("1. Chicken 65        Rs150\n");
+                printf("2. Dragon Chicken    Rs180\n");
+                printf("3. Paneer Tikka      Rs200\n");
+                printf("4. Gobi Manchurian   Rs120\n");
+                printf("5. Chilli Chicken    Rs170\n");
+
+                printf("Select Item : ");
+                scanf("%d",&item);
+
+                switch(item)
+                {
+                    case 1: price=150; break;
+                    case 2: price=180; break;
+                    case 3: price=200; break;
+                    case 4: price=120; break;
+                    case 5: price=170; break;
+                    default: printf("Invalid Item\n"); continue;
+                }
                 break;
-        case '2' :
-            printf("\nyou have chosen Main source\n ");
-            printf("1.biriyani  -Rs 200\n");
-            printf("2.butter naan  -Rs 40\n");
-            printf("3.paneer cury  -Rs 160\n");
-            printf("enter the item:");
-            scanf("%d",&item);
-            printf("enter the quantity:");
-            scanf("%d",&qty);
 
-            switch(item)
-            {
-                case 1:price=200;break;
-                case 2:price=40;break;
-                case 3:price=160;break;
-                default:
-                printf("invalid item");
-                return 0;
-            }
-            break;
-        case '3':
-            printf("\nyou have chosen desert\n");
-            printf("1.ice cream  -Rs 60\n");
-            printf("2.gulab jamun  -Rs 50\n");
-            printf("3.cake  -Rs 90\n");
-            printf("enter the item:");
-            scanf("%d",&item);
-            printf("enter the quantity:");
-            scanf("%d",&qty);
+            case 2:
+                printf("\n------ SOUPS ------\n");
+                printf("1. Tomato Soup       Rs80\n");
+                printf("2. Sweet Corn Soup   Rs90\n");
+                printf("3. Chicken Soup      Rs120\n");
+                printf("4. Hot & Sour Soup   Rs100\n");
 
-            switch(item)
-            {
-                case 1:price=60;break;
-                case 2:price=50;break;
-                case 3:price=90;break;
-                default:
-                printf("invalid item");
+                printf("Select Item : ");
+                scanf("%d",&item);
+
+                switch(item)
+                {
+                    case 1: price=80; break;
+                    case 2: price=90; break;
+                    case 3: price=120; break;
+                    case 4: price=100; break;
+                    default: printf("Invalid Item\n"); continue;
+                }
+                break;
+
+            case 3:
+                printf("\n------ MAIN COURSE ------\n");
+                printf("1. Chicken Biryani   Rs220\n");
+                printf("2. Veg Biryani       Rs180\n");
+                printf("3. Paneer Curry      Rs160\n");
+                printf("4. Butter Chicken    Rs250\n");
+                printf("5. Fried Rice        Rs150\n");
+
+                printf("Select Item : ");
+                scanf("%d",&item);
+
+                switch(item)
+                {
+                    case 1: price=220; break;
+                    case 2: price=180; break;
+                    case 3: price=160; break;
+                    case 4: price=250; break;
+                    case 5: price=150; break;
+                    default: printf("Invalid Item\n"); continue;
+                }
+                break;
+
+            case 4:
+                printf("\n------ BREADS ------\n");
+                printf("1. Butter Naan       Rs40\n");
+                printf("2. Garlic Naan       Rs50\n");
+                printf("3. Roti              Rs20\n");
+                printf("4. Kulcha            Rs45\n");
+
+                printf("Select Item : ");
+                scanf("%d",&item);
+
+                switch(item)
+                {
+                    case 1: price=40; break;
+                    case 2: price=50; break;
+                    case 3: price=20; break;
+                    case 4: price=45; break;
+                    default: printf("Invalid Item\n"); continue;
+                }
+                break;
+
+            case 5:
+                printf("\n------ RICE ITEMS ------\n");
+                printf("1. Jeera Rice        Rs120\n");
+                printf("2. Ghee Rice         Rs140\n");
+                printf("3. Veg Pulao         Rs150\n");
+                printf("4. Curd Rice         Rs90\n");
+
+                printf("Select Item : ");
+                scanf("%d",&item);
+
+                switch(item)
+                {
+                    case 1: price=120; break;
+                    case 2: price=140; break;
+                    case 3: price=150; break;
+                    case 4: price=90; break;
+                    default: printf("Invalid Item\n"); continue;
+                }
+                break;
+
+            case 6:
+                printf("\n------ DESSERTS ------\n");
+                printf("1. Ice Cream         Rs60\n");
+                printf("2. Gulab Jamun       Rs50\n");
+                printf("3. Cake              Rs90\n");
+                printf("4. Brownie           Rs110\n");
+
+                printf("Select Item : ");
+                scanf("%d",&item);
+
+                switch(item)
+                {
+                    case 1: price=60; break;
+                    case 2: price=50; break;
+                    case 3: price=90; break;
+                    case 4: price=110; break;
+                    default: printf("Invalid Item\n"); continue;
+                }
+                break;
+
+            case 7:
+                printf("\n------ COLD DRINKS ------\n");
+                printf("1. Coke              Rs40\n");
+                printf("2. Pepsi             Rs40\n");
+                printf("3. Sprite            Rs40\n");
+                printf("4. Mango Juice       Rs60\n");
+
+                printf("Select Item : ");
+                scanf("%d",&item);
+
+                switch(item)
+                {
+                    case 1: price=40; break;
+                    case 2: price=40; break;
+                    case 3: price=40; break;
+                    case 4: price=60; break;
+                    default: printf("Invalid Item\n"); continue;
+                }
+                break;
+
+            case 8:
+                printf("Thank You Visit Again\n");
                 return 0;
-            }
-            break;
-        case '4':
-            printf("Thank you visit again");
-            return 0;
+
             default:
-            printf("invalid choice");
-            return 0;
-    }
-    total=price*qty;
-    gst=total*0.05;
-    final_bill=total+gst;
+                printf("Invalid Category\n");
+                continue;
+        }
 
-    printf("\n<----------BILL------------>\n");
-    printf("price: Rs%2f\n",price);
-    printf("quantity: Rs%d\n",qty);
-    printf("subtotal: Rs%2f\n",total);
-    printf("gst: Rs%2f\n",gst);
-    printf("final_bill: Rs%2f",final_bill);
-    printf("\n<----------------------------\n");
+        printf("Enter Quantity : ");
+        scanf("%d",&qty);
 
-    printf("Thank You for visiting\n");
+        total = total + (price * qty);
+
+        printf("\nAdd More Items ? (Y/N) : ");
+        scanf(" %c",&choice);
+
+    }while(choice=='Y' || choice=='y');
+
+    gst = total * 0.05;
+    final_bill = total + gst;
+
+    printf("\n========== FINAL BILL ==========\n");
+    printf("Subtotal   : Rs %.2f\n",total);
+    printf("GST (5%%)   : Rs %.2f\n",gst);
+    printf("Final Bill : Rs %.2f\n",final_bill);
+    printf("================================\n");
+
+    printf("\nThank You For Visiting My Dhaba\n");
+
     return 0;
 }
